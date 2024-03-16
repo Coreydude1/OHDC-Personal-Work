@@ -14,13 +14,13 @@ class Animal:
         return (f"Id : {self.id} \nCurrent Location : ({self.currentLocation}) \nPrevious Location : ({self.previousLocation})")
     
     def move(self):
-        animal1.previousLocation.lat = animal1.currentLocation.lat
-        animal1.previousLocation.long = animal1.currentLocation.long
+        self.previousLocation.lat = self.currentLocation.lat
+        self.previousLocation.long = self.currentLocation.long
 
         coords = GpsEmulator.readGpsInput([self.currentLocation.lat, self.currentLocation.long])
 
-        animal1.currentLocation.lat = coords[0]
-        animal1.currentLocation.long = coords[1]
+        self.currentLocation.lat = coords[0]
+        self.currentLocation.long = coords[1]
     
 class Point:
 
