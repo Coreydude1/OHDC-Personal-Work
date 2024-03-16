@@ -11,7 +11,7 @@ class Animal:
         animals.append(self)
 
     def __str__(self) -> str:
-        return (f"Id : {self.id} \nCurrent Location : ({self.currentLocation}) \nPrevious Location : ({self.previousLocation})")
+        return (f"Animal Id : {self.id} \nCurrent Location : ({self.currentLocation}) \nPrevious Location : ({self.previousLocation})")
     
     def move(self):
         self.previousLocation.lat = self.currentLocation.lat
